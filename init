@@ -1,30 +1,39 @@
-#!/bin/sh
+#!/bin/bash
  
+SEDOPTION="-i"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  SEDOPTION="-i ''"
+fi
+
+OLDPACKAGENAME="com.stansassets.package-sample"
+OLDNAMESPACE="StansAssets.PackageSample"
+
 #package name
-LC_ALL=C find . -type f -name '*.json' -exec sed -i '' "s/com.stansassets.package-sample/$1/g" {} +
-LC_ALL=C find . -type f -name '*.cs' -exec sed -i '' "s/com.stansassets.package-sample/$1/g" {} +
-LC_ALL=C find . -type f -name '*.md' -exec sed -i '' "s/com.stansassets.package-sample/$1/g" {} +
+LC_ALL=C find . -type f -name '*.json' -exec sed $SEDOPTION "s/$OLDPACKAGENAME/$1/g" {} +
+LC_ALL=C find . -type f -name '*.cs' -exec sed $SEDOPTION "s/$OLDPACKAGENAME/$1/g" {} +
+LC_ALL=C find . -type f -name '*.md' -exec sed $SEDOPTION "s/$OLDPACKAGENAME/$1/g" {} +
 
 #namespace
-LC_ALL=C find . -type f -name '*.cs' -exec sed -i '' "s/StansAssets.PackageSample/$2/g" {} +
-LC_ALL=C find . -type f -name '*.asmdef' -exec sed -i '' "s/StansAssets.PackageSample/$2/g" {} +
+LC_ALL=C find . -type f -name '*.cs' -exec sed $SEDOPTION "s/$OLDNAMESPACE/$2/g" {} +
+LC_ALL=C find . -type f -name '*.asmdef' -exec sed $SEDOPTION "s/$OLDNAMESPACE/$2/g" {} +
 
 #rename files
-find . -type f -name 'StansAssets.PackageSample*' | while read FILE ; do
-	regexp="s/StansAssets.PackageSample/$2/";
+find . -type f -name "$OLDNAMESPACE*" | while read FILE ; do
+	regexp="s/$OLDNAMESPACE/$2/";
     newfile="$(echo ${FILE} | sed -e ${regexp})";
     mv "${FILE}" "${newfile}";
 done 
 
-mv 'com.stansassets.package-sample' "${1}";
+mv "$OLDPACKAGENAME" "${1}";
 
-PROJECT_NAME=$(echo "$2" | sed 's/^.*\.//')
-mv 'PackageSampleProject' "${PROJECT_NAME}Project";
-find . -type f -name 'com.stansassets.package-sample*' | while read FILE ; do
+#remove this \/ \/
+#PROJECT_NAME=$(echo "$2" | sed 's/^.*\.//')
+#mv 'PackageSampleProject' "${PROJECT_NAME}Project";
+#find . -type f -name 'com.stansassets.package-sample*' | while read FILE ; do
 	regexp="s/com.stansassets.package-sample/$1/";
     newfile="$(echo ${FILE} | sed -e ${regexp})";
     mv "${FILE}" "${newfile}";
-done 
+#done 
 
 
 echo "package name: $1"
