@@ -30,9 +30,9 @@ mv "$OLDPACKAGENAME" "${1}";
 #PROJECT_NAME=$(echo "$2" | sed 's/^.*\.//')
 #mv 'PackageSampleProject' "${PROJECT_NAME}Project";
 #find . -type f -name 'com.stansassets.package-sample*' | while read FILE ; do
-	regexp="s/com.stansassets.package-sample/$1/";
-    newfile="$(echo ${FILE} | sed -e ${regexp})";
-    mv "${FILE}" "${newfile}";
+#	regexp="s/com.stansassets.package-sample/$1/";
+#    newfile="$(echo ${FILE} | sed -e ${regexp})";
+#    mv "${FILE}" "${newfile}";
 #done 
 
 
