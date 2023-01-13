@@ -1,5 +1,13 @@
 #!/bin/bash
- 
+
+
+# if less than two arguments show usage
+if [    $# -le 1 ]; then
+    echo -e "\nUsage: $0 <new-package-name> <new-package-namespace>"
+    echo -e "\nExample: $0 com.mycompany.awesome-package MyCompany.AwesomePackage\n"
+    exit 1
+fi
+
 SEDOPTION="-i"
 if [[ "$OSTYPE" == "darwin"* ]]; then
   SEDOPTION="-i ''"
