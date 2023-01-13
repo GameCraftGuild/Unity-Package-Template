@@ -5,8 +5,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   SEDOPTION="-i ''"
 fi
 
-OLDPACKAGENAME="com.stansassets.package-sample"
-OLDNAMESPACE="StansAssets.PackageSample"
+OLDPACKAGENAME="com.gamecraftguild.package-template"
+OLDNAMESPACE="GameCraftGuild.PackageTemplate"
 
 OLDPACKAGESCOPE=$(echo "$OLDPACKAGENAME" | sed 's/\.[^\.]*$//')
 NEWPACKAGESCOPE=$(echo "$1" | sed 's/\.[^\.]*$//')
