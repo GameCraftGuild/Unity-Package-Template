@@ -8,33 +8,42 @@ fi
 OLDPACKAGENAME="com.stansassets.package-sample"
 OLDNAMESPACE="StansAssets.PackageSample"
 
+OLDPACKAGESCOPE=$(echo "$OLDPACKAGENAME" | sed 's/\.[^\.]*$//')
+NEWPACKAGESCOPE=$(echo "$2" | sed 's\.[^\.]*$//')
+
+#remove potentially existing unity project files
+rm -rf ./Library
+rm -rf ./Logs
+rm -rf ./obj
+rm -rf ./ProjectSettings
+rm -rf ./Temp
+rm -rf ./UserSettings
+rm -rf ./*.csproj
+rm -rf ./*.sln
+rm -rf ./**/*.meta
+
 #package name
-LC_ALL=C find . -type f -name '*.json' -exec sed $SEDOPTION "s/$OLDPACKAGENAME/$1/g" {} +
-LC_ALL=C find . -type f -name '*.cs' -exec sed $SEDOPTION "s/$OLDPACKAGENAME/$1/g" {} +
-LC_ALL=C find . -type f -name '*.md' -exec sed $SEDOPTION "s/$OLDPACKAGENAME/$1/g" {} +
+LC_ALL=C find ./Packages -type f -name '*.json' -exec sed $SEDOPTION "s/$OLDPACKAGENAME/$1/g" {} +
+LC_ALL=C find ./Packages -type f -name '*.cs' -exec sed $SEDOPTION "s/$OLDPACKAGENAME/$1/g" {} +
+LC_ALL=C find ./Packages -type f -name '*.md' -exec sed $SEDOPTION "s/$OLDPACKAGENAME/$1/g" {} +
+
+#package scope
+LC_ALL=C find ./Packages -type f -name '*.md' -exec sed $SEDOPTION "s/$OLDPACKAGENAME/$1/g" {} +
 
 #namespace
-LC_ALL=C find . -type f -name '*.cs' -exec sed $SEDOPTION "s/$OLDNAMESPACE/$2/g" {} +
-LC_ALL=C find . -type f -name '*.asmdef' -exec sed $SEDOPTION "s/$OLDNAMESPACE/$2/g" {} +
+LC_ALL=C find ./Packages -type f -name '*.cs' -exec sed $SEDOPTION "s/$OLDNAMESPACE/$2/g" {} +
+LC_ALL=C find ./Packages -type f -name '*.asmdef' -exec sed $SEDOPTION "s/$OLDNAMESPACE/$2/g" {} +
 
 #rename files
-find . -type f -name "$OLDNAMESPACE*" | while read FILE ; do
+find ./Packages -type f -name "$OLDNAMESPACE*" | while read FILE ; do
 	regexp="s/$OLDNAMESPACE/$2/";
     newfile="$(echo ${FILE} | sed -e ${regexp})";
     mv "${FILE}" "${newfile}";
 done 
 
-mv "$OLDPACKAGENAME" "${1}";
-
-#remove this \/ \/
-#PROJECT_NAME=$(echo "$2" | sed 's/^.*\.//')
-#mv 'PackageSampleProject' "${PROJECT_NAME}Project";
-#find . -type f -name 'com.stansassets.package-sample*' | while read FILE ; do
-#	regexp="s/com.stansassets.package-sample/$1/";
-#    newfile="$(echo ${FILE} | sed -e ${regexp})";
-#    mv "${FILE}" "${newfile}";
-#done 
-
+mv "./Packages/$OLDPACKAGENAME" "./Packages/${1}";
 
 echo "package name: $1"
+echo "package scope: $NEWPACKAGESCOPE"
 echo "package namespace: $2"
+echo "!!the init script should be removed from the repo after the package has been setup!!"
