@@ -1,14 +1,19 @@
 # Package Sample
 <!-- Describe your package -->
 
-[![NPM Package](https://img.shields.io/npm/v/com.gamecraftguild.package-template)](https://www.npmjs.com/package/com.gamecraftguild.package-template)
 [![openupm](https://img.shields.io/npm/v/com.gamecraftguild.package-template?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.gamecraftguild.package-template/)
-[![Licence](https://img.shields.io/npm/l/com.gamecraftguild.package-template)](https://github.com/StansAssets/com.gamecraftguild.package-template/blob/master/LICENSE)
-[![Issues](https://img.shields.io/github/issues/StansAssets/com.gamecraftguild.package-template)](https://github.com/StansAssets/com.gamecraftguild.package-template/issues)
+[![NPM Package](https://img.shields.io/npm/v/com.gamecraftguild.package-template)](https://www.npmjs.com/package/com.gamecraftguild.package-template)
+[![Licence](https://img.shields.io/npm/l/com.gamecraftguild.package-template)](https://github.com/GameCraftGuild/com.gamecraftguild.package-template/blob/master/LICENSE)
+[![Issues](https://img.shields.io/github/issues/GameCraftGuild/com.gamecraftguild.package-template)](https://github.com/GameCraftGuild/com.gamecraftguild.package-template/issues)
 
 <!-- Add some useful links here -->
 
-[API Reference](https://myapi) | [Forum](https://myforum) | [Wiki](https://github.com/StansAssets/com.gamecraftguild.package-template/wiki)
+[API Reference](https://myapi) | [Forum](https://myforum) | [Wiki](https://github.com/GameCraftGuild/com.gamecraftguild.package-template/wiki)
+
+### Install from OpenUPM [recommended]
+* Install openupm-cli `npm install -g openupm-cli` or `yarn global add openupm-cli`
+* Enter your unity project folder `cd <YOUR_UNITY_PROJECT_FOLDER>`
+* Install package `openupm add com.gamecraftguild.package-template`
 
 ### Install from NPM
 * Navigate to the `Packages` directory of your project.
@@ -17,7 +22,7 @@
   * Ensure `com.gamecraftguild` is part of `scopes`.
   * Add `com.gamecraftguild.package-template` to the `dependencies`, stating the latest version.
 
-A minimal example ends up looking like this. Please note that the version `X.Y.Z` stated here is to be replaced with [the latest released version](https://www.npmjs.com/package/com.gamecraftguild.foundation) which is currently [![NPM Package](https://img.shields.io/npm/v/com.gamecraftguild.foundation)](https://www.npmjs.com/package/com.gamecraftguild.foundation).
+A minimal example ends up looking like this. Please note that the version `X.Y.Z` stated here is to be replaced with [the latest released version](https://www.npmjs.com/package/com.gamecraftguild.package-template) which is currently [![NPM Package](https://img.shields.io/npm/v/com.gamecraftguild.package-template)](https://www.npmjs.com/package/com.gamecraftguild.package-template).
   ```json
   {
     "scopedRegistries": [
@@ -36,11 +41,6 @@ A minimal example ends up looking like this. Please note that the version `X.Y.Z
   }
   ```
 * Switch back to the Unity software and wait for it to finish importing the added package.
-
-### Install from OpenUPM
-* Install openupm-cli `npm install -g openupm-cli` or `yarn global add openupm-cli`
-* Enter your unity project folder `cd <YOUR_UNITY_PROJECT_FOLDER>`
-* Install package `openupm add com.gamecraftguild.package-template`
 
 ### Install from a Git URL [not supported]
 This package cannot be installed via Git URL because it's root directory is not the repository's root directory.

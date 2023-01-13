@@ -19,11 +19,11 @@
   },
   "homepage": "https://github.com/GameCraftGuild",
   "bugs": {
-    "url": "https://github.com/GameCraftGuild/Unity-Package-Template/issues",
+    "url": "https://github.com/GameCraftGuild/com.gamecraftguild.package-template/issues",
     "email": "gamecraftguild@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com:GameCraftGuild/Unity-Package-Template.git"
+    "url": "ssh://git@github.com:GameCraftGuild/com.gamecraftguild.package-template.git"
   }
 }

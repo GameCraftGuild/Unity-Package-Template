@@ -99,10 +99,10 @@ This structure was chosen for the following reasons:
 2. You have the Unity Project that your team may use to work on a package. There are a few benefits of having the project already set:
    * Team members (especially the ones who haven't worked with the project before) won't have to setup their own project
    * The project is already linked to the package since it is setup as an [embedded package](https://docs.unity3d.com/Manual/upm-embed.html)
-3. Structure emphasizes **one** unity package per repository to help focus changes to be always around the singular package and allow the use of git version tags for [openUPM](https://openupm.com/)'s package detection
+3. Structure emphasizes **one** unity package per repository to help focus changes to be always around the singular package and allow the use of git version tags for [openUPM](https://openupm.com/docs/adding-upm-package.html#upm-package-criteria)'s package detection
 
 #### Note:
-* It is recommended to use [openUPM](https://openupm.com/) as the means to distribute your package
+* It is recommended to use [openUPM](https://openupm.com/docs/adding-upm-package.html#upm-package-criteria) as the means to distribute your package
 * If you are planning to distribute your package via [Git URL](https://docs.unity3d.com/Manual/upm-git.html), this structure would not work for you. In such a case, your package would need to be in the repository's root directory
 
 ## Package Info 
