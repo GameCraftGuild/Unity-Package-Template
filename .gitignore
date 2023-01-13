@@ -128,4 +128,10 @@ __pycache__/
 # =========================================================================== #
 # 	Project-specific rules
 # =========================================================================== #
+# this entry ignores the package folder's meta files until its been renamed to the proper package name
+Packages/com.stansassets.package-sample/**/*.meta
 
+# \/ delete these when you are ready to begin working on your Unity project with embedded package \/
+UserSettings/
+ProjectSettings/
+# /\ delete these when you are ready to begin working on your Unity project with embedded package /\
