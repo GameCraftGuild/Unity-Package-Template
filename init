@@ -9,7 +9,7 @@ OLDPACKAGENAME="com.stansassets.package-sample"
 OLDNAMESPACE="StansAssets.PackageSample"
 
 OLDPACKAGESCOPE=$(echo "$OLDPACKAGENAME" | sed 's/\.[^\.]*$//')
-NEWPACKAGESCOPE=$(echo "$2" | sed 's\.[^\.]*$//')
+NEWPACKAGESCOPE=$(echo "$1" | sed 's/\.[^\.]*$//')
 
 #remove potentially existing unity project files
 rm -rf ./Library
@@ -28,7 +28,7 @@ LC_ALL=C find ./Packages -type f -name '*.cs' -exec sed $SEDOPTION "s/$OLDPACKAG
 LC_ALL=C find ./Packages -type f -name '*.md' -exec sed $SEDOPTION "s/$OLDPACKAGENAME/$1/g" {} +
 
 #package scope
-LC_ALL=C find ./Packages -type f -name '*.md' -exec sed $SEDOPTION "s/$OLDPACKAGENAME/$1/g" {} +
+LC_ALL=C find ./Packages -type f -name '*.md' -exec sed $SEDOPTION "s/$OLDPACKAGESCOPE/$NEWPACKAGESCOPE/g" {} +
 
 #namespace
 LC_ALL=C find ./Packages -type f -name '*.cs' -exec sed $SEDOPTION "s/$OLDNAMESPACE/$2/g" {} +
@@ -43,7 +43,8 @@ done
 
 mv "./Packages/$OLDPACKAGENAME" "./Packages/${1}";
 
-echo "package name: $1"
 echo "package scope: $NEWPACKAGESCOPE"
+echo "package name: $1"
 echo "package namespace: $2"
-echo "!!the init script should be removed from the repo after the package has been setup!!"
+echo "!! init script should be removed after package setup !!"
+echo "!! remember to remove ProjectSettings & UserSettings from the .gitignore !!"
