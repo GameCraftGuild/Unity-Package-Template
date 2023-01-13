@@ -34,7 +34,14 @@ LC_ALL=C find ./Packages -type f -name '*.md' -exec sed $SEDOPTION "s/$OLDPACKAG
 LC_ALL=C find ./Packages -type f -name '*.cs' -exec sed $SEDOPTION "s/$OLDNAMESPACE/$2/g" {} +
 LC_ALL=C find ./Packages -type f -name '*.asmdef' -exec sed $SEDOPTION "s/$OLDNAMESPACE/$2/g" {} +
 
-#rename files
+#rename files via package name
+find ./Packages -type f -name "$OLDPACKAGENAME*" | while read FILE ; do
+	regexp="s/$OLDPACKAGENAME/$1/";
+    newfile="$(echo ${FILE} | sed -e ${regexp})";
+    mv "${FILE}" "${newfile}";
+done 
+
+#rename files via namespace
 find ./Packages -type f -name "$OLDNAMESPACE*" | while read FILE ; do
 	regexp="s/$OLDNAMESPACE/$2/";
     newfile="$(echo ${FILE} | sed -e ${regexp})";
@@ -47,4 +54,4 @@ echo "package scope: $NEWPACKAGESCOPE"
 echo "package name: $1"
 echo "package namespace: $2"
 echo "!! init script should be removed after package setup !!"
-echo "!! remember to remove ProjectSettings & UserSettings from the .gitignore !!"
+echo "!! remember to DELETE temporary ignored files from the .gitignore !!"
