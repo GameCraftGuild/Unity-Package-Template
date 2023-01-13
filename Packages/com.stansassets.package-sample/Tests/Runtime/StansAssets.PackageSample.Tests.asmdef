@@ -1,8 +1,9 @@
 {
     "name": "StansAssets.PackageSample.Tests",
+    "rootNamespace": "StansAssets.PackageSample.Tests",
     "references": [
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner"
+        "StansAssets.PackageSample"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

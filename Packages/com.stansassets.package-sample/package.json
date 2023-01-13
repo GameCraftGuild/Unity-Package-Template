@@ -8,8 +8,6 @@
   "changelogUrl": "",
   "license": "See LICENSE.md file",
   "licensesUrl": "",
-  "dependencies": {
-  },
   "keywords": [
     "gamecraft",
     "gamecraftguild"
@@ -19,11 +17,10 @@
     "email": "gamecraftguild@gmail.com",
     "url": "https://github.com/GameCraftGuild"
   },
-  
   "homepage": "https://github.com/GameCraftGuild",
   "bugs": {
     "url": "https://github.com/GameCraftGuild/Unity-Package-Template/issues",
-    "email" : "gamecraftguild@gmail.com"
+    "email": "gamecraftguild@gmail.com"
   },
   "repository": {
     "type": "git",

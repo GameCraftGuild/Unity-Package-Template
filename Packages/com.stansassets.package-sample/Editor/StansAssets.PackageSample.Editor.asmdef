@@ -1,6 +1,9 @@
 {
     "name": "StansAssets.PackageSample.Editor",
-    "references": [],
+    "rootNamespace": "StansAssets.PackageSample.Editor",
+    "references": [
+        "StansAssets.PackageSample"
+    ],
     "includePlatforms": [
         "Editor"
     ],

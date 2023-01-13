@@ -8,10 +8,10 @@
 // "testables" : ["com.stansassets.package-sample"]
 // -----------------------------------------------------------------------------
 
-using UnityEngine.TestTools;
-using NUnit.Framework;
 using System.Collections;
+using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.TestTools;
 
 namespace StansAssets.PackageSample.Tests
 {
