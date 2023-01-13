@@ -1,31 +1,32 @@
 {
   "name": "com.stansassets.package-sample",
-  "displayName": "Stans Assets - Package Sample",
   "version": "0.0.1-preview",
-  "unity": "2019.3",
-  "description": "Package Sample.",
+  "displayName": "GameCraftGuild - Package Template",
+  "description": "a description of package",
+  "unity": "2022.2",
+  "documentationUrl": "",
+  "changelogUrl": "",
+  "license": "See LICENSE.md file",
+  "licensesUrl": "",
   "dependencies": {
-    "com.stansassets.foundation": "1.0.2"
   },
   "keywords": [
-    "keyword1",
-    "keyword2",
-    "keyword3"
+    "gamecraft",
+    "gamecraftguild"
   ],
-  "license": "MIT",
   "author": {
-    "name": "Stan's Assets",
-    "email": "stan@stansassets.com",
-    "url": "https://stansassets.com/"
+    "name": "GameCraft Guild",
+    "email": "gamecraftguild@gmail.com",
+    "url": "https://github.com/GameCraftGuild"
   },
   
-  "homepage": "https://api.stansassets.com/",
+  "homepage": "https://github.com/GameCraftGuild",
   "bugs": {
-    "url": "https://github.com/StansAssets/com.stansassets.foundation/issues",
-    "email" : "support@stansassets.com"
+    "url": "https://github.com/GameCraftGuild/Unity-Package-Template/issues",
+    "email" : "gamecraftguild@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com:StansAssets/com.stansassets.foundation.git"
+    "url": "ssh://git@github.com:GameCraftGuild/Unity-Package-Template.git"
   }
 }
