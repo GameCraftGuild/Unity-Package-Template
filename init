@@ -42,13 +42,6 @@ LC_ALL=C find ./Packages -type f -name '*.md' -exec sed $SEDOPTION "s/$OLDPACKAG
 LC_ALL=C find ./Packages -type f -name '*.cs' -exec sed $SEDOPTION "s/$OLDNAMESPACE/$2/g" {} +
 LC_ALL=C find ./Packages -type f -name '*.asmdef' -exec sed $SEDOPTION "s/$OLDNAMESPACE/$2/g" {} +
 
-#rename files via package name
-find ./Packages -type f -name "$OLDPACKAGENAME*" | while read FILE ; do
-	regexp="s/$OLDPACKAGENAME/$1/";
-    newfile="$(echo ${FILE} | sed -e ${regexp})";
-    mv "${FILE}" "${newfile}";
-done 
-
 #rename files via namespace
 find ./Packages -type f -name "$OLDNAMESPACE*" | while read FILE ; do
 	regexp="s/$OLDNAMESPACE/$2/";
@@ -57,6 +50,13 @@ find ./Packages -type f -name "$OLDNAMESPACE*" | while read FILE ; do
 done 
 
 mv "./Packages/$OLDPACKAGENAME" "./Packages/${1}";
+
+#rename files via package name
+find ./Packages -type f -name "$OLDPACKAGENAME*" | while read FILE ; do
+	regexp="s/$OLDPACKAGENAME/$1/";
+    newfile="$(echo ${FILE} | sed -e ${regexp})";
+    mv "${FILE}" "${newfile}";
+done 
 
 echo "package scope: $NEWPACKAGESCOPE"
 echo "package name: $1"
