@@ -1,5 +1,6 @@
 {
-    "name": "StansAssets.PackageSample.Samples",
+    "name": "GameCraftGuild.PackageTemplate",
+    "rootNamespace": "GameCraftGuild.PackageTemplate",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

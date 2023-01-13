@@ -1,9 +1,9 @@
 {
-    "name": "StansAssets.PackageSample.Tests",
-    "rootNamespace": "StansAssets.PackageSample.Tests",
+    "name": "GameCraftGuild.PackageTemplate.Tests",
+    "rootNamespace": "GameCraftGuild.PackageTemplate.Tests",
     "references": [
         "UnityEngine.TestRunner",
-        "StansAssets.PackageSample"
+        "GameCraftGuild.PackageTemplate"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

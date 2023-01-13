@@ -1,11 +1,11 @@
 {
-    "name": "StansAssets.PackageSample.Editor.Tests",
-    "rootNamespace": "StansAssets.PackageSample.Editor.Tests",
+    "name": "GameCraftGuild.PackageTemplate.Editor.Tests",
+    "rootNamespace": "GameCraftGuild.PackageTemplate.Editor.Tests",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "StansAssets.PackageSample",
-        "StansAssets.PackageSample.Editor"
+        "GameCraftGuild.PackageTemplate",
+        "GameCraftGuild.PackageTemplate.Editor"
     ],
     "includePlatforms": [
         "Editor"

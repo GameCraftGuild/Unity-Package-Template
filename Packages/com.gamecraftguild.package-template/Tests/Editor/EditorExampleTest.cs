@@ -5,7 +5,7 @@
 //
 // For embedded packages you don’t need to explicitly enable tests because embedded packages are in development.
 // However, for other types of dependencies, you need to add the `testables` attribute to the Project `manifest.json`
-// "testables" : ["com.stansassets.package-sample"]
+// "testables" : ["com.gamecraftguild.package-template"]
 // -----------------------------------------------------------------------------
 
 using System.Collections;
@@ -13,7 +13,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace StansAssets.PackageSample.Editor.Tests
+namespace GameCraftGuild.PackageTemplate.Editor.Tests
 {
     class EditorExampleTest
     {

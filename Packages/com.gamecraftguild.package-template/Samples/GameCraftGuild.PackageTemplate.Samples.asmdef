@@ -1,12 +1,7 @@
 {
-    "name": "StansAssets.PackageSample.Editor",
-    "rootNamespace": "StansAssets.PackageSample.Editor",
-    "references": [
-        "StansAssets.PackageSample"
-    ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "name": "GameCraftGuild.PackageTemplate.Samples",
+    "references": [],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
