@@ -12,8 +12,8 @@ I assume you already have some basic understanding of what the UPM package is an
 2. Run init script `bash init <new-package-name> <new-package-namespace>`
     * Example1: `bash init com.mycompany.awesome-package MyCompany.AwesomePackage`
     * Example2: `bash init com.stansassets.foundation Stansassets.Foundation`
-3. Open the root directory as a Unity project and ensure the embedded package is compiling and detected
-4. Open `package.json` and update package metadata. You can do this by selecting the `package.json` in the Unity Editor or within a text editor. I would recommend using a text editor since there are additional properties not consumed by Unity in the `package.json`
+3. Open the root directory as a Unity project and ensure the embedded package is detected and compiles
+4. Open `package.json` and update the package metadata. You can do this by selecting the `package.json` in the Unity Editor or within a text editor. I would recommend using a text editor since there are additional properties not consumed by Unity in the `package.json`
 5. Close the Unity project. Then go into the `.gitignore` file and remove the temporarily ignored Unity files.
    ```gitignore
    ...
@@ -26,7 +26,7 @@ I assume you already have some basic understanding of what the UPM package is an
 6. Delete the init script and make your initial git commit. Happy package making!
 
 ## Package manifest
-Unity uses the package manifest file `package.json` to manage information about a specific version of a specific package. The package manifest is always at the root of the package and contains crucial information about the package, such as its registered name and version number. ([Full Package manifest Unity Guide](https://docs.unity3d.com/Manual/upm-manifestPkg.html))
+Unity uses the package manifest file `package.json` to manage information about a specific package. The package manifest is always at the root of the package and contains crucial information about the package, such as its registered name and version number. ([Full Package manifest Unity Guide](https://docs.unity3d.com/Manual/upm-manifestPkg.html))
 
 ### Required attributes
 * **name** - The officially registered package name.
