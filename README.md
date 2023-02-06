@@ -1,7 +1,7 @@
 # Unity UPM Package Template
 
 #### Adaption/Fork Note:
-This template is an adaptation of [Stan's Assets](https://github.com/StansAssets)' Unity Package Sample. It has been heavily rearranged to suit our needs at GameCraft Guild. Stan and the other contributors did an amazing job outlining and describing how to get started making a custom Unity Package! So the original readme information he wrote has been kept with edits and additions to describe this new adaption of his package template.
+This template is an adaptation of [Stan's Assets](https://github.com/StansAssets)' Unity Package Sample. It has been rearranged to suit our needs at GameCraft Guild. Stan and the other contributors did an amazing job outlining and describing how to get started making a custom Unity Package! So the original readme information written has mainly been kept with edits and additions that describe this new adaption.
 
 ## Introduction
 The purpose of this template is to give you a head start when creating a new package for Unity. You'll find the repository structure description below as well as why it was built this way.
