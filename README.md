@@ -14,15 +14,7 @@ I assume you already have some basic understanding of what the UPM package is an
     * Example2: `bash init com.stansassets.foundation Stansassets.Foundation`
 3. Open the root directory as a Unity project and ensure the embedded package is detected and compiles
 4. Open `package.json` and update the package metadata. You can do this by selecting the `package.json` in the Unity Editor or within a text editor. I would recommend using a text editor since there are additional properties not consumed by Unity in the `package.json`
-5. Close the Unity project. Then go into the `.gitignore` file and remove the temporarily ignored Unity files.
-   ```gitignore
-   ...
-   # ===== DELETE when ready to work on Unity project and embedded package ===== #
-   UserSettings/
-   ProjectSettings/
-   **/*.meta
-   # ===== DELETE when ready to work on Unity project and embedded package ===== #
-   ``` 
+5. Close the Unity project
 6. Delete the init script and make your initial git commit. Happy package making!
 
 ## Package manifest
