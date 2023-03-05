@@ -8,7 +8,7 @@ The purpose of this template is to give you a head start when creating a new pac
 I assume you already have some basic understanding of what the UPM package is and why you would like to build one. If not, please check out Unity's [Creating custom packages](https://docs.unity3d.com/Manual/CustomPackages.html) page.
 
 ## How to use
-1. Create a new repository and use this repository as a template
+1. Create a new repository using this repository as the template
 2. Run init script `bash init <new-package-name> <new-package-namespace>`
     * Example1: `bash init com.mycompany.awesome-package MyCompany.AwesomePackage`
     * Example2: `bash init com.stansassets.foundation Stansassets.Foundation`
@@ -84,14 +84,14 @@ This is how `package.json` looks like in our template repository:
 * `.gitattributes` - Git attributes file designed to this specific repository structure
 * `README.md` - text file that introduces and explains a project
 * `Assets/` - a default assets folder with an empty example scene which helps Unity detect this repository as a Unity Project
-* `Packages/com.gamecraftguild.package-template` - your embedded Unity package location
+* `Packages/com.gamecraftguild.package-template` - your embedded Unity package location where all package code will go
 
 This structure was chosen for the following reasons:
 1. Simplicity. Your root directory is a Unity Project making it easy to stand up and get started working on your package
 2. You have the Unity Project that your team may use to work on a package. There are a few benefits of having the project already set:
    * Team members (especially the ones who haven't worked with the project before) won't have to setup their own project
-   * The project is already linked to the package since it is setup as an [embedded package](https://docs.unity3d.com/Manual/upm-embed.html)
-3. Structure emphasizes **one** unity package per repository to help focus changes to be always around the singular package and allow the use of git version tags for [openUPM](https://openupm.com/docs/adding-upm-package.html#upm-package-criteria)'s package detection
+   * The project is already linked to your package since it is setup as an [embedded package](https://docs.unity3d.com/Manual/upm-embed.html)
+3. Structure emphasizes **one** unity package per repository to help focus changes around the singular package and allow the use of git version tags for [openUPM](https://openupm.com/docs/adding-upm-package.html#upm-package-criteria)'s package detection
 
 #### Note:
 * It is recommended to use [openUPM](https://openupm.com/docs/adding-upm-package.html#upm-package-criteria) as the means to distribute your package
